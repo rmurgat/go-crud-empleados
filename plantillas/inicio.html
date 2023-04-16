@@ -11,12 +11,16 @@
         </tr>
     </thead>
     <tbody>
+        {{range.}}
         <tr>
-            <td>1</td>
-            <td>Ruben Murga</td>
-            <td>ruben.murga@outlook.com</td>
-            <td>Editar | Borrar</td>
+            <td>{{.Id}}</td>
+            <td>{{.Nombre}}</td>
+            <td>{{.Correo}}</td>
+            <td>
+                <a name="" id="" class="btn btn-primary" href="#" role="button">Editar</a>
+                <a name="" id="" class="btn btn-danger" href="/borrar?id={{.Id}}" role="button">Borrar</a>
         </tr>
+        {{end}}
     </tbody>
 </table>
 
